@@ -1,0 +1,114 @@
+.section-header {
+  font-family: Montserrat;
+  height: 90vh;
+}
+
+.header {
+  &__role {
+    position: absolute;
+    z-index: -1;
+    top: 8%;
+    left: 0;
+    font-size: 18vw;
+    color: $color-white;
+    opacity: 0.5;
+    margin: 10rem 0 10rem 5rem;
+    letter-spacing: -15px;
+    text-shadow: 0 8px 32px rgba($color-grey-light, $alpha: 0.15);
+
+    @include respond(sm) {
+      margin: 25rem 0 25rem 5rem;
+    }
+
+    @include respond(lg) {
+      margin: 20rem 0 20rem 5rem;
+    }
+  }
+
+  &__photo {
+    width: 90vh;
+    height: 90vh;
+    position: absolute;
+    bottom: 3rem;
+    right: 5rem;
+    background-image: url(../img/ra3alfa.png);
+    background-size: cover;
+    background-position: right;
+
+    -webkit-mask-image: -webkit-gradient(
+      linear,
+      left 85%,
+      left bottom,
+      from(rgba(0, 0, 0, 1)),
+      to(rgba(0, 0, 0, 0))
+    );
+
+    @include respond(lg) {
+      width: 85vh;
+      height: 85vh;
+      right: 0rem;
+    }
+  }
+
+  &__aboutme {
+    margin: 0 0 10rem 10rem;
+    max-width: 40%;
+    min-width: 550px;
+    position: absolute;
+    z-index: 100;
+    bottom: 0;
+    left: 0;
+
+    @include respond(lg) {
+      margin: 0 0 8rem 8rem;
+    }
+
+    @include respond(desktop) {
+      margin: 0 0 12rem 15rem;
+    }
+
+    &--name {
+      text-transform: uppercase;
+      color: $color-grey;
+      letter-spacing: 2px;
+      font-size: 1.5rem;
+      font-weight: 400;
+    }
+
+    &--role {
+      font-weight: 700;
+      font-size: 6rem;
+      color: $color-grey-dark;
+    }
+
+    &--story {
+      font-size: 1.6rem;
+      font-family: Roboto;
+      font-weight: 300;
+      color: $color-grey;
+      line-height: 1.4;
+      letter-spacing: 0.15px;
+    }
+
+    &--buttons {
+      display: flex;
+    }
+
+    &--link {
+      font-size: 1.9rem;
+      font-weight: 700;
+      font-family: Roboto;
+      color: $color-grey-dark;
+      line-height: 1.4;
+      margin: 1rem 0 1rem;
+      text-decoration: none;
+
+      &-light {
+        font-weight: 300;
+        line-height: 1.75;
+        font-size: 1.6rem;
+        padding: 0 2rem 0 2rem;
+      }
+    }
+  }
+}
