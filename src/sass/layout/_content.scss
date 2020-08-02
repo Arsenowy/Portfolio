@@ -1,8 +1,30 @@
 .section {
-  margin: 0 10rem 10rem 10rem;
+  margin: 0 auto;
+  max-width: 1980px;
+  margin: 0 15rem;
+
+  @include respond(big-desktop) {
+    margin: 0 auto;
+  }
 
   @include respond(lg) {
-    margin: 0 8rem 8rem 8rem;
+    margin: 0 10rem;
+  }
+
+  @include respond(md) {
+    margin: 0 8rem;
+  }
+
+  @include respond(sm) {
+    margin: 0 5rem;
+  }
+
+  @include respond(tab) {
+    margin: 0 3rem;
+  }
+
+  @include respond(phone) {
+    margin: 0 2rem;
   }
 }
 .heading {
@@ -22,6 +44,10 @@
     color: $color-white;
     opacity: 0.5;
     text-shadow: 0 8px 16px rgba($color-grey-light, $alpha: 0.15);
+
+    @include respond(tab) {
+      font-size: 15rem;
+    }
   }
 
   &__sub {

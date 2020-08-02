@@ -1,0 +1,146 @@
+.content {
+  font-family: roboto;
+  padding: 2rem 0 4rem 0;
+  display: grid;
+  grid-gap: 6rem;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto;
+
+  @include respond(desktop) {
+    grid-gap: 10rem;
+  }
+
+  @include respond(phone) {
+    grid-gap: 1.5rem;
+  }
+
+  &__title {
+    position: absolute;
+    z-index: 5;
+    top: 0;
+    left: 0;
+    transform: translateY(-50%);
+    font-size: 10rem;
+    color: $color-white;
+    opacity: 0.9;
+    margin: 15rem 0 10rem 5rem;
+    letter-spacing: -10px;
+    text-shadow: 0 8px 32px rgba($color-grey-light, $alpha: 0.15);
+
+    @include respond(lg) {
+      letter-spacing: -5px;
+      font-size: 8rem;
+    }
+
+    @include respond(tab) {
+      letter-spacing: -2px;
+      font-size: 7rem;
+      margin: 7rem 0 0 2.5rem;
+    }
+
+    @include respond(phone) {
+      font-size: 5rem;
+      letter-spacing: 1px;
+    }
+
+    &--big {
+      font-size: 10vw;
+      transform: translateY(-100%);
+      margin: 0;
+
+      @include respond(tab) {
+        font-size: 14rem;
+        transform: translateY(-50%);
+      }
+    }
+  }
+
+  &__heading {
+    position: relative;
+    z-index: 10;
+    font-size: 3.2rem;
+    color: $color-grey-dark;
+    margin: 2rem 0 2rem 0;
+
+    @include respond(lg) {
+      font-size: 2.8rem;
+    }
+  }
+
+  &__paragraph {
+    text-transform: uppercase;
+    color: $color-grey;
+    letter-spacing: 2px;
+    font-size: 1.6rem;
+
+    @include respond(lg) {
+      font-size: 1.4rem;
+    }
+
+    @include respond(phone) {
+      color: white;
+    }
+
+    &--sm {
+      @include respond(phone) {
+        transform: translateY(-150px);
+        margin-left: 2rem;
+      }
+    }
+  }
+
+  &__container {
+    position: relative;
+
+    &--1 {
+      grid-area: 2/1/3/3;
+    }
+
+    &--2 {
+      grid-area: 2/3/3/5;
+    }
+
+    &--img {
+      width: 100%;
+      filter: brightness(0.95);
+
+      @include respond(phone) {
+        filter: brightness(0.7);
+      }
+    }
+
+    &--big-left {
+      grid-area: 1/1/2/4;
+    }
+
+    &--big-right {
+      grid-area: 1/2/2/5;
+
+      @include respond(tab) {
+        grid-area: 1/3/2/5;
+      }
+
+      @include respond(phone) {
+        grid-area: 1/1/2/5;
+      }
+    }
+
+    &--big-text-left {
+      grid-area: 1/1/2/2;
+      align-self: center;
+
+      @include respond(tab) {
+        grid-area: 1/1/2/3;
+      }
+
+      @include respond(phone) {
+        margin-left: 6rem;
+        margin-top: 2rem;
+      }
+    }
+
+    &--big-text-right {
+      grid-area: 1/4/2/5;
+    }
+  }
+}
