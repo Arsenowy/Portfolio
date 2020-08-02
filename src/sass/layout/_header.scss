@@ -1,4 +1,5 @@
 .section-header {
+  position: relative;
   font-family: Montserrat;
   height: 100vh;
 }
@@ -16,24 +17,46 @@
     letter-spacing: -15px;
     text-shadow: 0 8px 32px rgba($color-grey-light, $alpha: 0.15);
 
+    @include respond(lg) {
+      margin: 20rem 0 20rem 5rem;
+    }
+
     @include respond(sm) {
       margin: 25rem 0 25rem 5rem;
     }
 
-    @include respond(lg) {
-      margin: 20rem 0 20rem 5rem;
+    @include respond(tab) {
+      top: 0;
     }
   }
 
   &__photo {
+    & > img {
+      height: 100%;
+      width: 100%;
+      overflow: hidden;
+
+      @include respond(md) {
+        transform: translateX(20rem);
+      }
+
+      @include respond(tab) {
+        transform: translateX(30rem);
+      }
+
+      @include respond(phone) {
+        transform: translateX(45rem);
+      }
+    }
+    overflow: hidden;
     width: 90vh;
     height: 90vh;
     position: absolute;
     bottom: 3rem;
     right: 5rem;
-    background-image: url(../img/ra3alfa.png);
-    background-size: cover;
-    background-position: right;
+    // background-image: url(../img/ra3alfa.png);
+    // background-size: cover;
+    // background-position: right;
 
     -webkit-mask-image: -webkit-gradient(
       linear,
@@ -46,7 +69,24 @@
     @include respond(lg) {
       width: 85vh;
       height: 85vh;
-      right: 0rem;
+    }
+
+    @include respond(md) {
+      width: 85vh;
+      height: 85vh;
+      opacity: 0.9;
+    }
+
+    @include respond(tab) {
+      width: 70vh;
+      height: 70vh;
+      bottom: 15rem;
+      opacity: 0.8;
+    }
+
+    @include respond(phone) {
+      bottom: 35rem;
+      opacity: 0.6;
     }
   }
 
@@ -67,6 +107,11 @@
       margin: 0 0 12rem 15rem;
     }
 
+    @include respond(tab) {
+      width: 90vw;
+      min-width: 400px;
+    }
+
     &--name {
       text-transform: uppercase;
       color: $color-grey;
@@ -79,6 +124,10 @@
       font-weight: 700;
       font-size: 6rem;
       color: $color-grey-dark;
+
+      @include respond(phone) {
+        margin-bottom: 5rem;
+      }
     }
 
     &--story {
