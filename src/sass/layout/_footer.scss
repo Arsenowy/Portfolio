@@ -1,0 +1,58 @@
+.contact {
+  position: relative;
+  font-family: Montserrat;
+  margin: 0 auto;
+  margin-bottom: 10rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__main {
+    z-index: 5;
+    position: relative;
+    top: 0;
+    left: 0;
+    color: $color-white;
+    opacity: 0.9;
+    margin: 15rem 0 10rem 5rem;
+    letter-spacing: -10px;
+    text-shadow: 0 8px 32px rgba($color-grey-light, $alpha: 0.15);
+    font-size: 10vw;
+    margin: 0;
+
+    @include respond(lg) {
+      letter-spacing: -5px;
+    }
+
+    @include respond(tab) {
+      font-size: 14rem;
+      letter-spacing: -2px;
+      font-size: 7rem;
+      margin: 0 0 4rem 2.5rem;
+    }
+
+    @include respond(phone) {
+      letter-spacing: 1px;
+    }
+  }
+
+  &__sub {
+    text-align: center;
+    margin: 2rem;
+    font-size: 2rem;
+  }
+
+  &__small {
+    margin: 1rem;
+    color: $color-grey;
+    letter-spacing: 1px;
+    font-size: 1.6rem;
+    font-weight: 700;
+
+    & > a {
+      text-decoration: none;
+      font-weight: 400;
+      color: $color-grey;
+    }
+  }
+}
