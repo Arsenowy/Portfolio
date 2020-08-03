@@ -92,7 +92,7 @@
 
   &__aboutme {
     margin: 0 0 10rem 10rem;
-    max-width: 40%;
+    max-width: 40vw;
     min-width: 550px;
     position: absolute;
     z-index: 100;
@@ -137,6 +137,7 @@
       color: $color-grey;
       line-height: 1.4;
       letter-spacing: 0.15px;
+      max-width: 60vw;
     }
 
     &--buttons {
